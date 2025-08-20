@@ -36,9 +36,12 @@ services:
       TWILIO_ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
       TWILIO_AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
       SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      AI_SERVICE_URL: http://ai-microservices:8000   # 👈 added this
     depends_on:
       postgres:
         condition: service_healthy
+      ai-microservices:                # 👈 also add dependency
+        condition: service_started
     networks:
       - backend
       - frontend
@@ -49,6 +52,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+
 
   # AI Microservices
   ai-microservices:
