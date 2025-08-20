@@ -1,0 +1,14 @@
+{
+  "name": "neiworks-backend",
+  "version": "1.0.0",
+  "description": "Backend for NeiWorks application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "dashboard": {
+    "title": "NeiWorks Analytics Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Average Resolution Time",
+        "targets": [
+          {
+            "target": "avg_resolution_time"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Citizen Satisfaction",
+        "targets": [
+          {
+            "target": "citizen_satisfaction"
+          }
+        ]
+      }
+    ]
+  }
+}
