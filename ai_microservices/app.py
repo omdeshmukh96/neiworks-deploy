@@ -16,5 +16,5 @@ def detect_issue():
     # Placeholder for Computer Vision detection logic
     return jsonify({'issue': 'Pothole detected', 'message': 'Image processed successfully.'})
 
-if __name__ == '__main__':
-    app.run(port=8000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
