@@ -39,7 +39,7 @@ services:
       postgres:
         condition: service_healthy
       ai-microservices:
-        condition: service_healthy   # 👈 changed
+        condition: service_healthy
     networks:
       - backend
       - frontend
@@ -79,7 +79,7 @@ services:
       dockerfile: Dockerfile.prod
     restart: always
     environment:
-      REACT_APP_API_URL: http://backend:5000   # 👈 fixed
+      REACT_APP_API_URL: http://backend:5000
     depends_on:
       backend:
         condition: service_healthy
@@ -131,7 +131,7 @@ services:
       frontend:
         condition: service_started
       backend:
-        condition: service_healthy   # 👈 ensure backend is alive
+        condition: service_healthy
     networks:
       - frontend
       - backend
@@ -146,4 +146,5 @@ networks:
   backend:
   frontend:
   monitoring:
+
 
